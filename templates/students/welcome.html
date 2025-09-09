@@ -1,0 +1,63 @@
+{% extends 'students/base.html' %}
+
+{% block title %}Welcome - Student Portal{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Student Portal</h1>
+            <p class="hero-subtitle">Manage student information with modern, intuitive interface</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'students:list' %}" class="btn btn-modern">
+                    <i class="fas fa-list me-2"></i>View Students
+                </a>
+                <a href="{% url 'students:student_details' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-user me-2"></i>Student Details
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card feature-card h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="card-title">Student Management</h5>
+                    <p class="card-text">Efficiently manage student records, enrollment, and academic information in one centralized system.</p>
+                    <a href="{% url 'students:list' %}" class="btn btn-modern">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card feature-card h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h5 class="card-title">Analytics & Reports</h5>
+                    <p class="card-text">Generate comprehensive reports and analytics to track student performance and institutional metrics.</p>
+                    <a href="#" class="btn btn-modern">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card feature-card h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="card-title">Secure & Reliable</h5>
+                    <p class="card-text">Built with security-first approach ensuring your student data is protected and always accessible.</p>
+                    <a href="#" class="btn btn-modern">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

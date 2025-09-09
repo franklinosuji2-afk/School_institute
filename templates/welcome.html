@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - School Institute Management System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .hero-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            color: #333;
+        }
+        .portal-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            color: #333;
+        }
+        .portal-card:hover {
+            transform: translateY(-10px);
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        .students-icon { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .teachers-icon { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-lg-10">
+                <!-- Main Hero Section -->
+                <div class="hero-card p-5 mb-5 text-center">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <i class="fas fa-school me-3"></i>
+                        School Institute Management System
+                    </h1>
+                    <p class="lead mb-4">
+                        A comprehensive platform for managing students and teachers
+                    </p>
+                    <div class="d-flex justify-content-center gap-2 flex-wrap">
+                        <span class="badge bg-primary px-3 py-2">Student Management</span>
+                        <span class="badge bg-success px-3 py-2">Teacher Administration</span>
+                        <span class="badge bg-info px-3 py-2">Modern UI/UX</span>
+                        <span class="badge bg-warning px-3 py-2">Responsive Design</span>
+                    </div>
+                </div>
+
+                <!-- Portal Cards -->
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="portal-card p-4 h-100 text-center">
+                            <div class="icon-circle students-icon mx-auto mb-4">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Students Portal</h3>
+                            <p class="text-muted mb-4">
+                                Manage student records, enrollment, academic information, and track progress.
+                            </p>
+                            <div class="d-grid">
+                                <a href="/students/" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-users me-2"></i>Access Students Portal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="portal-card p-4 h-100 text-center">
+                            <div class="icon-circle teachers-icon mx-auto mb-4">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3 class="h4 fw-bold mb-3">Teachers Portal</h3>
+                            <p class="text-muted mb-4">
+                                Manage teacher profiles, schedules, assignments, and performance.
+                            </p>
+                            <div class="d-grid">
+                                <a href="/teachers/" class="btn btn-success btn-lg">
+                                    <i class="fas fa-chalkboard-teacher me-2"></i>Access Teachers Portal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="row g-3 mt-4">
+                    <div class="col-6 col-md-3">
+                        <div class="portal-card p-3 text-center">
+                            <div class="h4 fw-bold text-primary mb-1">500+</div>
+                            <small class="text-muted">Students</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="portal-card p-3 text-center">
+                            <div class="h4 fw-bold text-success mb-1">50+</div>
+                            <small class="text-muted">Teachers</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="portal-card p-3 text-center">
+                            <div class="h4 fw-bold text-info mb-1">25+</div>
+                            <small class="text-muted">Subjects</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="portal-card p-3 text-center">
+                            <div class="h4 fw-bold text-warning mb-1">10+</div>
+                            <small class="text-muted">Departments</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="text-center mt-5">
+                    <a href="/bye/" class="text-white text-decoration-none">
+                        <i class="fas fa-sign-out-alt me-2"></i>Exit System
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{% extends 'teachers/base.html' %}
+
+{% block title %}Teacher Details - Teachers Portal{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="detail-card card">
+                    <div class="card-header">
+                        <h3 class="mb-0">
+                            <i class="fas fa-chalkboard-teacher me-3"></i>
+                            Teacher Details
+                        </h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 120px; height: 120px; font-size: 3rem;">
+                                    FR
+                                </div>
+                                <h5>Franklin</h5>
+                                <span class="badge bg-success">Active Teacher</span>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row mb-3">
+                                    <div class="col-sm-4"><strong>Employee ID:</strong></div>
+                                    <div class="col-sm-8">TCH_123</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-4"><strong>Full Name:</strong></div>
+                                    <div class="col-sm-8">Franklin Rodriguez</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-4"><strong>Subject/Class:</strong></div>
+                                    <div class="col-sm-8"><span class="badge bg-info">AWS</span></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-4"><strong>Department:</strong></div>
+                                    <div class="col-sm-8">Computer Science</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-4"><strong>Email:</strong></div>
+                                    <div class="col-sm-8">franklin@school.edu</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-4"><strong>Phone:</strong></div>
+                                    <div class="col-sm-8">+1 (555) 987-6543</div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-4"><strong>Experience:</strong></div>
+                                    <div class="col-sm-8"><strong class="text-success">5 years</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-4">
+                        <div class="d-flex justify-content-between">
+                            <a href="/teachers/" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Welcome
+                            </a>
+                            <div>
+                                <button class="btn btn-primary me-2">
+                                    <i class="fas fa-edit me-2"></i>Edit
+                                </button>
+                                <button class="btn btn-outline-danger" onclick="alert('Delete functionality would be here')">
+                                    <i class="fas fa-trash me-2"></i>Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

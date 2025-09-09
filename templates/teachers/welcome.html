@@ -1,0 +1,103 @@
+{% extends 'teachers/base.html' %}
+
+{% block title %}Welcome - Teachers Portal{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome Teachers</h1>
+            <p class="hero-subtitle">Manage teacher information and resources with ease</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'teachers:teacher_list' %}" class="btn btn-modern">
+                    <i class="fas fa-list me-2"></i>View Teachers
+                </a>
+                <a href="{% url 'teachers:teachers_details' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-user me-2"></i>Teacher Details
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card feature-card h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h5 class="card-title">Teacher Management</h5>
+                    <p class="card-text">Efficiently manage teacher profiles, assignments, and academic information in one centralized system.</p>
+                    <a href="{% url 'teachers:teacher_list' %}" class="btn btn-modern">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card feature-card h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h5 class="card-title">Schedule Management</h5>
+                    <p class="card-text">Organize class schedules, manage time slots, and coordinate teaching assignments effectively.</p>
+                    <a href="#" class="btn btn-modern">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card feature-card h-100">
+                <div class="card-body text-center p-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h5 class="card-title">Performance Tracking</h5>
+                    <p class="card-text">Monitor teaching performance, track achievements, and generate comprehensive evaluation reports.</p>
+                    <a href="#" class="btn btn-modern">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Stats Section -->
+    <div class="row mt-5">
+        <div class="col-md-3 mb-3">
+            <div class="card feature-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-users text-primary fa-2x mb-3"></i>
+                    <h4 class="text-primary">{{ total_teachers|default:"125" }}</h4>
+                    <p class="text-muted mb-0">Active Teachers</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card feature-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-book text-success fa-2x mb-3"></i>
+                    <h4 class="text-success">{{ total_subjects|default:"45" }}</h4>
+                    <p class="text-muted mb-0">Subjects Taught</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card feature-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-graduation-cap text-info fa-2x mb-3"></i>
+                    <h4 class="text-info">{{ total_departments|default:"12" }}</h4>
+                    <p class="text-muted mb-0">Departments</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card feature-card text-center">
+                <div class="card-body">
+                    <i class="fas fa-star text-warning fa-2x mb-3"></i>
+                    <h4 class="text-warning">4.8</h4>
+                    <p class="text-muted mb-0">Avg. Rating</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
